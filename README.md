@@ -31,4 +31,4 @@ python iLearnPlus.py
 ![iLearnPlus](images/LoadModel.png )
 
 *iLearnPlus* Data visulaization:
-![iLearnPlus](images/LoadModel.png)
+![iLearnPlus](images/DataVisualization.png)
