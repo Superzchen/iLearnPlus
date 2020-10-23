@@ -13,6 +13,7 @@ cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearn
 python iLearnPlus.py
 ```
 ## *iLearnPlus* interfaces:
+
 *iLearnPlus* main interface:
 ![iLearnPlus](images/iLearnPlus.png )
 
@@ -29,4 +30,4 @@ python iLearnPlus.py
 ![iLearnPlus](images/LoadModel.png )
 
 *iLearnPlus* Data visulaization:
-![iLearnPlus](images/LoadModel.png )
+![iLearnPlus](images/LoadModel.png)
