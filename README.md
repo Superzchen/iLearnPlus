@@ -6,16 +6,19 @@
   ```sh
   git clone https://github.com/Superzchen/iLearnPlus
   ```
-  *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. In addition, the Qt GUI framework must be installed in your machine and configured correctly. **For convenience, we strongly recommended users to install the Anaconda Python environment (The Qt GUI framework is built in) in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
+  *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. **For convenience, we strongly recommended users to install the Anaconda Python environment in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
 
   - Step 1. Download and install the anaconda platform.
+  ```sh  
+  Download from: https://www.anaconda.com/products/individual
+  ```
   
   - Step 2. Install PyTorch:
-  ```sh
+  ```sh  
   Please refer to https://pytorch.org/get-started/locally/ for PyTorch installation.
   ```
   
-  - Step 3. Install other necessary packages:
+  - Step 3. Install other necessary packages, by the following commands:
   ```sh
   pip3 install lightgbm
   pip3 install xgboost
