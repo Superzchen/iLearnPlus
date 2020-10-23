@@ -12,3 +12,5 @@ cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearn
 ```sh
 python iLearnPlus.py
 ```
+## *iLearnPlus* interfaces:
+![iLearnPlus](images/iLearnPlus.png )
