@@ -19,16 +19,16 @@ python iLearnPlus.py
 ![iLearnPlus](images/iLearnPlus.png )
 
 *iLearnPlus-Basic* module interface:
-![iLearnPlus](images/Basic.png )
+![Basic module](images/Basic.png )
 
 *iLearnPlus-Estimator* module interface:
-![iLearnPlus](images/Estimator.png )
+![Estimator module](images/Estimator.png )
 
 *iLearnPlus-AutoML* module interface:
-![iLearnPlus](images/AutoML.png )
+![AutoML module](images/AutoML.png )
 
 *iLearnPlus-LoadModel* module interface:
-![iLearnPlus](images/LoadModel.png )
+![LoadModel module](images/LoadModel.png )
 
 *iLearnPlus* Data visulaization:
-![iLearnPlus](images/DataVisualization.png)
+![Data visualizaiton](images/DataVisualization.png)
