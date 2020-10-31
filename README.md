@@ -74,3 +74,15 @@ The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their 
   
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
 
+# Case study results for lysine crotonylation site prediction:
+Here, the *iLearnPlus-Estimator* module was used to comparatively assess the performance of different feature sets. We used the *iLearnPlus-Estimator* module in the standalone GUI version to load the data, produced seven feature sets (AAC, EAAC, EGAAC, DDE, binary, ZScale, and BLOSUM) and selected a machine-learning algorithm, the random forest algorithm (with the default setting of 1000 trees) to construct the classifier via 10-fold cross-validation. This analysis reveals that the model built utilizing the EGAAC feature descriptors achieved the best performance. 
+  
+![Case study](https://github.com/Superzchen/iLearnPlus/blob/main/images/Case_1.png)
+  
+Then, the *iLearnPlus-AutoML* module to comparatively evaluate the predictive performance across seven machine-learning algorithms: SGD, LR, XGBoost, LightGBM, RF, MLP, and CNN. We used the bootstrap tests to assess statistical significance of the differences between the ROC curves produced by these algorithms.
+  
+![Case study](https://github.com/Superzchen/iLearnPlus/blob/main/images/Case_2.png)
+  
+The result shows that the deep-learning model, CNN, achieved the best predictive performance among all the seven machine-learning algorithms, with Acc=85.4% and AUC=0.823.
+  
+*iLearnPlus* makes it easy and straightforward to design and optimize machine-learning pipelines to achieve a competitive (if not the best) predictive performance. 
