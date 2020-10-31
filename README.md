@@ -37,6 +37,9 @@ cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearn
 ```sh
 python iLearnPlus.py
 ```
+  
+Please refer to [*iLearnPlus* manual](https://github.com/Superzchen/iLearnPlus/blob/main/docs/iLearnPlus_manual.pdf ) for detailed usage.
+  
 ## *iLearnPlus* interfaces:
 
 *iLearnPlus* main interface:
@@ -70,3 +73,4 @@ The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their 
 *iLearnPlus* Data visulaization:
   
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
+
