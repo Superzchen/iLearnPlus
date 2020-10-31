@@ -1,9 +1,8 @@
 # *iLearnPlus*: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization. 
-*iLearnPlus* is the first machine-learning platform with both graphical- and web-based user interface that enables the construction of automated machine-learning pipelines for computational analysis and predictions using nucleic acid and protein sequences. Four major modules, including iLearnPlus-Basic, iLearnPlus-Estimator, iLearnPlus-AutoML, and iLearnPlus-LoadModel, are provided in iLearnPlus for biologists and bioinformaticians to conduct customizable sequence-based feature engineering and analysis, machine-learning algorithm construction, performance assessment, statistical analysis, and data visualization, without additional programming. iLearnPlus integrates 21 machine-learning algorithms (including 12 conventional classification algorithms, two ensemble-learning frameworks and seven deep-learning approaches) and 19 major sequence encoding schemes (in total 152 feature descriptors), outnumbering all the current web servers and stand-alone tools for biological sequence analysis, to the best of our knowledge. In addition, the friendly GUI (Graphical User Interface) of *iLearnPlus* is available to biologists to conduct their analyses smoothly, significantly increasing the effectiveness and user experience compared to the existing pipelines. iLearnPlus is an open-source platform for academic purposes and is available at https://github.com/Superzchen/iLearnPlus/. The iLearnPlus-Basic module is online accessible at http://ilearnplus.erc.monash.edu/.
+*iLearnPlus* is the first machine-learning platform with both graphical- and web-based user interface that enables the construction of automated machine-learning pipelines for computational analysis and predictions using nucleic acid and protein sequences. *iLearnPlus* integrates 21 machine-learning algorithms (including 12 conventional classification algorithms, two ensemble-learning frameworks and seven deep-learning approaches) and 19 major sequence encoding schemes (in total 152 feature descriptors), outnumbering all the current web servers and stand-alone tools for biological sequence analysis, to the best of our knowledge. In addition, the friendly GUI (Graphical User Interface) of *iLearnPlus* is available to biologists to conduct their analyses smoothly, significantly increasing the effectiveness and user experience compared to the existing pipelines. iLearnPlus is an open-source platform for academic purposes and is available at https://github.com/Superzchen/iLearnPlus/. The iLearnPlus-Basic module is online accessible at http://ilearnplus.erc.monash.edu/.
 
 # Methods
-*iLearnPlus* covers the five major steps needed to build effective models for analysis and prediction of nucleic acid and proteins sequences: feature extraction, feature analysis, classifier construction, performance evaluation and data/result visualization. We implement these steps by developing four modules in iLearnPlus: *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLearnPlus-AutoML*, and *iLearnPlus-LoadModel*. .
-![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/Architecture.png )
+Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLearnPlus-AutoML*, and *iLearnPlus-LoadModel*, are provided in *iLearnPlus* for biologists and bioinformaticians to conduct customizable sequence-based feature engineering and analysis, machine-learning algorithm construction, performance assessment, statistical analysis, and data visualization, without additional programming.![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/Architecture.png )
 
 # Installation
 
@@ -33,7 +32,7 @@
 
 
 
-# For users who want to use *iLearnPlus* package :
+# Guidance to Use :
 cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearnPlus.py’ script as follows:
 ```sh
 python iLearnPlus.py
@@ -41,24 +40,33 @@ python iLearnPlus.py
 ## *iLearnPlus* interfaces:
 
 *iLearnPlus* main interface:
-
+  
 ![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/iLearnPlus.png )
 
 *iLearnPlus-Basic* module interface:
+  
 The *iLearnPlus-Basic* module facilities analysis and prediction using a selected feature-based representation of the input protein/RNA/DNA sequences (sequence descriptors) and a selected machine-learning classifier. This module is particularly instrumental when interrogating the impact of using different sequence feature descriptors and machine-learning algorithms on the predictive performance.
+  
 ![Basic module](https://github.com/Superzchen/iLearnPlus/blob/main/images/Basic.png )
 
 *iLearnPlus-Estimator* module interface:
+  
 The *iLearnPlus-Estimator* module provides a flexible way to perform feature extraction by allowing users to select multiple feature descriptors. 
+  
 ![Estimator module](https://github.com/Superzchen/iLearnPlus/blob/main/images/Estimator.png )
 
 *iLearnPlus-AutoML* module interface:
+  
 The *iLearnPlus-AutoML* module focuses on automated benchmarking and maximization of the predictive performance across different machine-learning classifiers that are applied on the same set or combined sets of feature descriptors.
+  
 ![AutoML module](https://github.com/Superzchen/iLearnPlus/blob/main/images/AutoML.png )
 
 *iLearnPlus-LoadModel* module interface:
+  
 The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their models.
+  
 ![LoadModel module](https://github.com/Superzchen/iLearnPlus/blob/main/images/LoadModel.png )
 
 *iLearnPlus* Data visulaization:
+  
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
