@@ -93,4 +93,4 @@ The result shows that the deep-learning model, CNN, achieved the best predictive
 # Citation
 If you find *iLearnPlus* useful, please kindly cite the following paper:
   
-Chen Z, Zhao P, Li C, Li F, Xiang D, Chen YZ, Akutsu T, Daly RJ, Webb GI, Zhao QZ*, Kurgan L*, Song J* . iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization, 2020. (Submitted)
+Chen Z, Zhao P, Li C, Li F, Xiang D, Chen YZ, Akutsu T, Daly RJ, Webb GI, Zhao Q*, Kurgan L*, Song J* . iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization, 2020. (Submitted)
