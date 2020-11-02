@@ -4,13 +4,16 @@
 # Methods
 Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLearnPlus-AutoML*, and *iLearnPlus-LoadModel*, are provided in *iLearnPlus* for biologists and bioinformaticians to conduct customizable sequence-based feature engineering and analysis, machine-learning algorithm construction, performance assessment, statistical analysis, and data visualization, without additional programming.![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/Architecture.png )
 
+# Running Environment
+  *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. **For convenience, we strongly recommended users to install the Anaconda Python environment in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
+  
 # Installation
-
+  
   - Download *iLearnPlus* by 
   ```sh
   git clone https://github.com/Superzchen/iLearnPlus
   ```
-  *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. **For convenience, we strongly recommended users to install the Anaconda Python environment in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
+
 
   - Step 1. Download and install the anaconda platform.
   ```sh  
@@ -86,3 +89,8 @@ Then, the *iLearnPlus-AutoML* module to comparatively evaluate the predictive pe
 The result shows that the deep-learning model, CNN, achieved the best predictive performance among all the seven machine-learning algorithms, with Acc=85.4% and AUC=0.823.
   
 *iLearnPlus* makes it easy and straightforward to design and optimize machine-learning pipelines to achieve a competitive (if not the best) predictive performance. 
+  
+# Citation
+If you find *iLearnPlus* useful, please kindly cite the following paper:
+  
+Chen Z, Zhao P, Li C, Li F, Xiang D, Chen YZ, Akutsu T, Daly RJ, Webb GI, Zhao QZ*, Kurgan L*, Song J* . iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization, 2020. (Submitted)
