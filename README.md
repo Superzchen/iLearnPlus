@@ -1,13 +1,15 @@
 # *iLearnPlus*: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization. 
+
+## Introduction
 *iLearnPlus* is the first machine-learning platform with both graphical- and web-based user interface that enables the construction of automated machine-learning pipelines for computational analysis and predictions using nucleic acid and protein sequences. *iLearnPlus* integrates 21 machine-learning algorithms (including 12 conventional classification algorithms, two ensemble-learning frameworks and seven deep-learning approaches) and 19 major sequence encoding schemes (in total 152 feature descriptors), outnumbering all the current web servers and stand-alone tools for biological sequence analysis, to the best of our knowledge. In addition, the friendly GUI (Graphical User Interface) of *iLearnPlus* is available to biologists to conduct their analyses smoothly, significantly increasing the effectiveness and user experience compared to the existing pipelines. iLearnPlus is an open-source platform for academic purposes and is available at https://github.com/Superzchen/iLearnPlus/. The iLearnPlus-Basic module is online accessible at http://ilearnplus.erc.monash.edu/.
 
-# Methods
+## Methods
 Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLearnPlus-AutoML*, and *iLearnPlus-LoadModel*, are provided in *iLearnPlus* for biologists and bioinformaticians to conduct customizable sequence-based feature engineering and analysis, machine-learning algorithm construction, performance assessment, statistical analysis, and data visualization, without additional programming.![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/Architecture.png )
 
-# Running Environment
+## Running environment
   *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. **For convenience, we strongly recommended users to install the Anaconda Python environment in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
   
-# Installation
+## Installation
   
   - Download *iLearnPlus* by 
   ```sh
@@ -35,7 +37,7 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
 
 
 
-# Guidance to Use :
+## Guidance to use :
 cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearnPlus.py’ script as follows:
 ```sh
 python iLearnPlus.py
@@ -77,7 +79,8 @@ The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their 
   
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
 
-# Case study results for lysine crotonylation site prediction:
+## Application example
+### Identification of lysine crotonylation site
 Here, the *iLearnPlus-Estimator* module was used to comparatively assess the performance of different feature sets. We used the *iLearnPlus-Estimator* module in the standalone GUI version to load the data, produced seven feature sets (AAC, EAAC, EGAAC, DDE, binary, ZScale, and BLOSUM) and selected a machine-learning algorithm, the random forest algorithm (with the default setting of 1000 trees) to construct the classifier via 10-fold cross-validation. This analysis reveals that the model built utilizing the EGAAC feature descriptors achieved the best performance. 
   
 ![Case study](https://github.com/Superzchen/iLearnPlus/blob/main/images/Case_1.png)
@@ -88,9 +91,11 @@ Then, the *iLearnPlus-AutoML* module to comparatively evaluate the predictive pe
   
 The result shows that the deep-learning model, CNN, achieved the best predictive performance among all the seven machine-learning algorithms, with Acc=85.4% and AUC=0.823.
   
+The lysine crotonylation datasets can be downloaded [here](https://github.com/Superzchen/iLearnPlus/blob/main/data/Lysine_crotonylation.txt ).
+  
 *iLearnPlus* makes it easy and straightforward to design and optimize machine-learning pipelines to achieve a competitive (if not the best) predictive performance. 
   
-# Citation
+## Citation
 If you find *iLearnPlus* useful, please kindly cite the following paper:
   
 Chen Z. et al. iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization, 2020. (Submitted)
