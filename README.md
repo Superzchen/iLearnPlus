@@ -47,35 +47,35 @@ Please refer to [*iLearnPlus* manual](https://github.com/Superzchen/iLearnPlus/b
   
 ## *iLearnPlus* interfaces:
 
-*iLearnPlus* main interface:
+### *iLearnPlus* main interface:
   
 ![iLearnPlus](https://github.com/Superzchen/iLearnPlus/blob/main/images/iLearnPlus.png )
 
-*iLearnPlus-Basic* module interface:
+### *iLearnPlus-Basic* module interface:
   
 The *iLearnPlus-Basic* module facilities analysis and prediction using a selected feature-based representation of the input protein/RNA/DNA sequences (sequence descriptors) and a selected machine-learning classifier. This module is particularly instrumental when interrogating the impact of using different sequence feature descriptors and machine-learning algorithms on the predictive performance.
   
 ![Basic module](https://github.com/Superzchen/iLearnPlus/blob/main/images/Basic.png )
 
-*iLearnPlus-Estimator* module interface:
+### *iLearnPlus-Estimator* module interface:
   
 The *iLearnPlus-Estimator* module provides a flexible way to perform feature extraction by allowing users to select multiple feature descriptors. 
   
 ![Estimator module](https://github.com/Superzchen/iLearnPlus/blob/main/images/Estimator.png )
 
-*iLearnPlus-AutoML* module interface:
+### *iLearnPlus-AutoML* module interface:
   
 The *iLearnPlus-AutoML* module focuses on automated benchmarking and maximization of the predictive performance across different machine-learning classifiers that are applied on the same set or combined sets of feature descriptors.
   
 ![AutoML module](https://github.com/Superzchen/iLearnPlus/blob/main/images/AutoML.png )
 
-*iLearnPlus-LoadModel* module interface:
+### *iLearnPlus-LoadModel* module interface:
   
 The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their models.
   
 ![LoadModel module](https://github.com/Superzchen/iLearnPlus/blob/main/images/LoadModel.png )
 
-*iLearnPlus* Data visulaization:
+### *iLearnPlus* Data visulaization:
   
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
 
