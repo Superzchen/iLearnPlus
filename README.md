@@ -27,7 +27,7 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   Please refer to https://pytorch.org/get-started/locally/ for PyTorch installation.
   ```
   
-  - Step 3. Install other necessary packages, by the following commands:
+  - Step 3. Install lightgbm, xgboost and qdarkstyle:
   ```sh
   pip3 install lightgbm
   pip3 install xgboost
