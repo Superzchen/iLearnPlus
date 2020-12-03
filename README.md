@@ -31,8 +31,7 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   ```sh
   pip3 install lightgbm
   pip3 install xgboost
-  pip3 install qdarkstyle
-  ...
+  pip3 install qdarkstyle  
   ```
 
 
