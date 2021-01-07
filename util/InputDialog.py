@@ -33,6 +33,7 @@ class QSOrderInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('QSOrder setting')
+        self.resize(400, 110)
         self.setFont(QFont('Arial', 10))
         layout = QFormLayout(self)
         self.lagLineEdit = MyLineEdit("2")
@@ -91,6 +92,7 @@ class QPAACInput(QDialog):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('PAAC & APAAC setting')
         self.setFont(QFont('Arial', 10))
+        self.resize(400, 110)
         layout = QFormLayout(self)
         self.lambdaLineEdit = MyLineEdit("2")
         self.lambdaLineEdit.clicked.connect(self.setLambdaValue)
@@ -262,6 +264,7 @@ class QDNAACC2Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA Auto-Correlation setting')
+        self.resize(650, 400)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lag value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -366,6 +369,7 @@ class QDNADPCPInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA DPCP setting')
+        self.resize(650, 400)
         layout = QGridLayout(self)
         label = QLabel('Di-DNA physicochemical indices: (Press [Ctrl] to select more)')
         self.tablewidget = QTableWidget(25, 6)
@@ -420,6 +424,7 @@ class QDNAACC3Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA Auto-Correlation setting')
+        self.resize(430, 300)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lag value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -487,6 +492,7 @@ class QDNATPCPInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA TPCP setting')
+        self.resize(430, 300)
         layout = QGridLayout(self)
         label = QLabel('Tri-DNA physicochemical indices: (Press [Ctrl] to select more)')
         self.tablewidget = QTableWidget(3, 4)
@@ -543,6 +549,7 @@ class QRNAACC2Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('RNA Auto-Correlation setting')
+        self.resize(430, 300)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lag value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -612,8 +619,9 @@ class QRNADPCPInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('RNA DPCP setting')
+        self.resize(430, 300)
         layout = QGridLayout(self)
-        label = QLabel('Di-DNA physicochemical indices: (Press [Ctrl] to select more)')
+        label = QLabel('Di-RNA physicochemical indices: (Press [Ctrl] to select more)')
         self.tablewidget = QTableWidget(6, 4)
         self.tablewidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tablewidget.verticalHeader().setVisible(False)
@@ -703,6 +711,7 @@ class QDNAPse2Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA Pseudo Nucleic Acid Composition')
+        self.resize(650, 400)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lambda value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -788,6 +797,7 @@ class QDNAPse3Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('DNA Pseudo Nucleic Acid Composition')
+        self.resize(430, 300)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lambda value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -795,7 +805,7 @@ class QDNAPse3Input(QDialog):
         weightLabel = QLabel('Weight factor (0~1):')
         self.weightLineEdit = MyLineEdit("0.1")
 
-        label = QLabel('Di-DNA physicochemical indices: (Press [Ctrl] to select more)')
+        label = QLabel('Tri-DNA physicochemical indices: (Press [Ctrl] to select more)')
         self.tablewidget = QTableWidget(3, 4)
         self.tablewidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tablewidget.verticalHeader().setVisible(False)
@@ -875,6 +885,7 @@ class QRNAPse2Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('RNA Pseudo Nucleic Acid Composition')
+        self.resize(430, 350)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lambda value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -1052,6 +1063,7 @@ class QRNAPseKNCInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('RNA Pseudo Nucleic Acid Composition')
+        self.resize(430, 350)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lambda value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -1234,6 +1246,7 @@ class QAAindexInput(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('AAIndex')
+        self.resize(850, 500)
         layout = QGridLayout(self)
         label = QLabel('AAIndex: (Press [Ctrl] to select more)')
         self.tablewidget = QTableWidget(67, 8)
@@ -1373,6 +1386,7 @@ class QAAindex2Input(QDialog):
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
         self.setWindowTitle('Autocorrelation')
+        self.resize(850, 500)
         layout = QGridLayout(self)
         lagLabel = QLabel('Lag value:')
         self.lagLineEdit = MyLineEdit("2")
@@ -1747,7 +1761,7 @@ class QRandomForestInput(QDialog):
         self.buttons.accepted.connect(self.accept)
         self.buttons.rejected.connect(self.reject)
         layout.addRow('Tree number', self.tree_number)
-        layout.addRow('CPU number', self.cpu_number)
+        layout.addRow('Number of threads', self.cpu_number)
         layout.addRow(self.auto)
         layout.addRow('Trees range from', self.start_tree_num)
         layout.addRow('Trees range to', self.end_tree_num)
@@ -2154,10 +2168,10 @@ class QXGBoostInput(QDialog):
         self.buttons.accepted.connect(self.accept)
         self.buttons.rejected.connect(self.reject)
         layout.addRow('Booster:', self.boosterComboBox)
-        layout.addRow('Threads number:', self.cpu_number)
+        layout.addRow('Number of threads:', self.cpu_number)
         layout.addRow('Max depth (3~10):', self.maxDepthLineEdit)
         layout.addRow('Learnning rate:', self.learningRateLineEdit)
-        layout.addRow('n_estimator:', self.n_estimatorLineEdit)
+        # layout.addRow('n_estimator:', self.n_estimatorLineEdit)
         layout.addRow('colsample_bytree', self.colsample_bytreeLineEdit)
         layout.addRow(self.auto)
         layout.addRow('Depth range', self.depthRangeLineEdit)
@@ -2599,7 +2613,7 @@ class QNetInput_2(QDialog):
         self.buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, Qt.Horizontal, self)
         self.buttons.accepted.connect(self.accept)
         self.buttons.rejected.connect(self.reject)
-        layout.addRow('Input size (integer):', self.in_channels)
+        layout.addRow('Input channels (integer):', self.in_channels)
         layout.addRow('Input length (integer):', self.in_length)
         layout.addWidget(label)
         layout.addRow('Hidden size (integer):', self.hidden_size)
@@ -2811,7 +2825,7 @@ class QNetInput_4(QDialog):
         self.buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, Qt.Horizontal, self)
         self.buttons.accepted.connect(self.accept)
         self.buttons.rejected.connect(self.reject)
-        layout.addRow('Input size (integer):', self.in_channels)
+        layout.addRow('Input channels (integer):', self.in_channels)
         layout.addRow('Input length (integer):', self.in_length)
         layout.addWidget(label)
         layout.addRow('Dropout rate (0~1):', self.drop_out)
@@ -2977,7 +2991,7 @@ class QNetInput_5(QDialog):
         self.buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, Qt.Horizontal, self)
         self.buttons.accepted.connect(self.accept)
         self.buttons.rejected.connect(self.reject)
-        layout.addRow('Input size (integer):', self.in_channels)
+        layout.addRow('Input channels (integer):', self.in_channels)
         layout.addRow('Input length (integer):', self.in_length)
         layout.addWidget(label)
         layout.addRow('Learning rate (0~1):', self.learning_rate)
@@ -3441,6 +3455,7 @@ class QSelectModel(QDialog):
 
     def initUI(self):
         self.setWindowFlags(Qt.WindowCloseButtonHint)
+        self.resize(400, 100)
         self.setWindowTitle('Select')
         self.setFont(QFont('Arial', 10))
         layout = QFormLayout(self)
@@ -3459,6 +3474,39 @@ class QSelectModel(QDialog):
         result = dialog.exec_()
         model = dialog.modelComboBox.currentText()
         return model, result == QDialog.Accepted
+
+
+class QSCombineModelDialog(QDialog):
+    def __init__(self, model_list):
+        super(QSCombineModelDialog, self).__init__()
+        self.setStyleSheet(qdarkstyle.load_stylesheet_pyqt5())
+        self.setWindowIcon(QIcon('images/logo.ico'))
+        self.model_list = model_list
+        self.initUI()
+
+    def initUI(self):
+        self.setWindowFlags(Qt.WindowCloseButtonHint)
+        self.setWindowTitle('Combine models')
+        self.resize(500, 90)
+        self.setFont(QFont('Arial', 10))
+        layout = QFormLayout(self)
+        self.modelComboBox = QComboBox()
+        self.modelComboBox.addItems(['LR', 'RF','SVM', 'DecisionTree', 'LightGBM', 'XGBoost', 'KNN', 'LDA', 'QDA', 'SGD', 'NaiveBayes', 'Bagging', 'AdaBoost', 'GBDT'])
+        self.modelComboBox.setCurrentIndex(0)        
+        self.buttons = QDialogButtonBox(QDialogButtonBox.Ok | QDialogButtonBox.Cancel, Qt.Horizontal, self)
+        self.buttons.accepted.connect(self.accept)
+        self.buttons.rejected.connect(self.reject)
+        layout.addRow("Use what algorithm to combine models:", self.modelComboBox)        
+        layout.addWidget(self.buttons)   
+
+    @staticmethod
+    def getValues(model_list):
+        dialog = QSCombineModelDialog(model_list)
+        result = dialog.exec_()
+        model = dialog.modelComboBox.currentText()        
+        return model, result == QDialog.Accepted
+
+
 
 
 

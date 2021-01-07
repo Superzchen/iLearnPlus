@@ -10,10 +10,10 @@ class ModelMetrics(object):
         super(ModelMetrics, self).__init__()
         self.metrics = pd.DataFrame(data=None, columns=['Id', 'StartTime', 'EndTime', 'Sn', 'Sp', 'Pre', 'Acc', 'MCC', 'F1', 'AUROC', 'AUPRC'])
         self.classification_task = None
-        self.aucData = {}
-        self.prcData = {}
-        self.prediction_scores = {}
-        self.models = {}
+        self.aucData = {}                                               # dict key=Id, value=Pandas DataFrame
+        self.prcData = {}                                               # dict key=Id, value=Pandas DataFrame
+        self.prediction_scores = {}                                     # dict key=Id, value=Pandas DataFrame
+        self.models = {}                                                # dict key=Id, value=model_list
 
     def insert_data(self, metric_ndarray, id, auc_df, prc_df, prediction_score, model=None):
         df = pd.DataFrame(data=metric_ndarray)

@@ -106,6 +106,12 @@ myDataFile = {
 }
 
 def check_acc_arguments(method, type, parameters):
+    """
+    Check auto-correlation parameters.
+    :param method: i.e. DAC, DCC, DACC, TAC, TCC, TACC
+    :param type: i.e. DNA, RNA
+    :return:
+    """
     kmer = myKmer[method]
     myIndex = []
     myProperty = {}
@@ -129,6 +135,12 @@ def check_acc_arguments(method, type, parameters):
     return myIndex, myProperty, kmer, True
 
 def check_Pse_arguments(method, type, parameters):
+    """
+    Check auto-correlation parameters.
+    :param method: i.e. PseDNC, PseKNC, PCPseDNC, PCPseTNC, SCPseDNC, SCPseTNC
+    :param type: i.e. DNA, RNA
+    :return:
+    """
     myIndex = []
     myProperty = {}
     dataFile = ''

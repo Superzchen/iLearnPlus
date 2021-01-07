@@ -3,52 +3,82 @@
 
 import numpy as np
 import pandas as pd
-import base64
 
-## secret key ##################################################################
-CBzeXMuZXhpdChhcHAuZXhlY18o="""#################################################
-Y2xhc3MgTWFya3ZDbHVzdGVyKG9iamVjdCk6CiAgICBkZWYgX19pbml0X18oc2VsZiwgZGF0YSwgZXhw
-YW5kX2ZhY3Rvcj0yLCBpbmZsYXRlX2ZhY3Rvcj0yLjAsIG11bHRfZmFjdG9yPTIuMCwgbWF4X2xvb3A9
-MjAwKToKICAgICAgICBzdXBlcihNYXJrdkNsdXN0ZXIsIHNlbGYpLl9faW5pdF9fKCkKICAgICAgICBN
-ID0gbnAuY29ycmNvZWYoZGF0YSkKICAgICAgICBNW00gPCAwXSA9IDAKICAgICAgICBmb3IgaSBpbiBy
-YW5nZShsZW4oTSkpOgogICAgICAgICAgICBNW2ldW2ldID0gMAogICAgICAgIGltcG9ydCBuZXR3b3Jr
-eCBhcyBueAogICAgICAgIEcgPSBueC5mcm9tX251bXB5X21hdHJpeChNKQogICAgICAgIHNlbGYuTSwg
-c2VsZi5jbHVzdGVycyA9IHNlbGYubmV0d29ya3hfbWNsKEcsIGV4cGFuZF9mYWN0b3I9ZXhwYW5kX2Zh
-Y3RvciwgaW5mbGF0ZV9mYWN0b3I9aW5mbGF0ZV9mYWN0b3IsCiAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgbWF4X2xvb3A9bWF4X2xvb3AsIG11bHRfZmFjdG9yPW11
-bHRfZmFjdG9yKQogICAgICAgIHNlbGYuY2x1c3Rlcl9hcnJheSA9IHNlbGYuZ2V0X2FycmF5KCkKCiAg
-ICBkZWYgZ2V0X2FycmF5KHNlbGYpOgogICAgICAgIGFycmF5ID0gW10KICAgICAgICBmb3Iga2V5IGlu
-IHNlbGYuY2x1c3RlcnM6CiAgICAgICAgICAgIGZvciB2YWx1ZSBpbiBzZWxmLmNsdXN0ZXJzW2tleV06
-CiAgICAgICAgICAgICAgICBhcnJheS5hcHBlbmQoW3ZhbHVlLCBrZXldKQogICAgICAgIGRmID0gcGQu
-RGF0YUZyYW1lKG5wLmFycmF5KGFycmF5KSwgY29sdW1ucz1bJ1NhbXBsZScsICdDbHVzdGVyJ10pCiAg
-ICAgICAgZGYgPSBkZi5zb3J0X3ZhbHVlcyhieT0nU2FtcGxlJywgYXNjZW5kaW5nPVRydWUpCiAgICAg
-ICAgcmV0dXJuIGRmLkNsdXN0ZXIudmFsdWVzCgogICAgZGVmIG5ldHdvcmt4X21jbChzZWxmLCBHLCBl
-eHBhbmRfZmFjdG9yPTIsIGluZmxhdGVfZmFjdG9yPTIsIG1heF9sb29wPTEwLCBtdWx0X2ZhY3Rvcj0x
-KToKICAgICAgICBpbXBvcnQgbmV0d29ya3ggYXMgbngKICAgICAgICBBID0gbnguYWRqYWNlbmN5X21h
-dHJpeChHKQogICAgICAgIHJldHVybiBzZWxmLm1jbChucC5hcnJheShBLnRvZGVuc2UoKSksIGV4cGFu
-ZF9mYWN0b3IsIGluZmxhdGVfZmFjdG9yLCBtYXhfbG9vcCwgbXVsdF9mYWN0b3IpCgogICAgZGVmIG1j
-bChzZWxmLCBNLCBleHBhbmRfZmFjdG9yPTIsIGluZmxhdGVfZmFjdG9yPTIsIG1heF9sb29wPTEwLCBt
-dWx0X2ZhY3Rvcj0xKToKICAgICAgICBNID0gc2VsZi5hZGRfZGlhZyhNLCBtdWx0X2ZhY3RvcikKICAg
-ICAgICBNID0gc2VsZi5ub3JtYWxpemUoTSkKICAgICAgICBmb3IgaSBpbiByYW5nZShtYXhfbG9vcCk6
-CiAgICAgICAgICAgIE0gPSBzZWxmLmluZmxhdGUoTSwgaW5mbGF0ZV9mYWN0b3IpCiAgICAgICAgICAg
-IE0gPSBzZWxmLmV4cGFuZChNLCBleHBhbmRfZmFjdG9yKQogICAgICAgICAgICBpZiBzZWxmLnN0b3Ao
-TSwgaSk6IGJyZWFrCgogICAgICAgIGNsdXN0ZXJzID0gc2VsZi5nZXRfY2x1c3RlcnMoTSkKICAgICAg
-ICByZXR1cm4gTSwgY2x1c3RlcnMKCiAgICBkZWYgYWRkX2RpYWcoc2VsZiwgQSwgbXVsdF9mYWN0b3Ip
-OgogICAgICAgIHJldHVybiBBICsgbXVsdF9mYWN0b3IgKiBucC5pZGVudGl0eShBLnNoYXBlWzBdKQoK
-ICAgIGRlZiBub3JtYWxpemUoc2VsZiwgQSk6CiAgICAgICAgY29sdW1uX3N1bXMgPSBBLnN1bShheGlz
-PTApCiAgICAgICAgbmV3X21hdHJpeCA9IEEgLyBjb2x1bW5fc3Vtc1tucC5uZXdheGlzLCA6XQogICAg
-ICAgIHJldHVybiBuZXdfbWF0cml4CgogICAgZGVmIGluZmxhdGUoc2VsZiwgQSwgaW5mbGF0ZV9mYWN0
-b3IpOgogICAgICAgIHJldHVybiBzZWxmLm5vcm1hbGl6ZShucC5wb3dlcihBLCBpbmZsYXRlX2ZhY3Rv
-cikpCgogICAgZGVmIGV4cGFuZChzZWxmLCBBLCBleHBhbmRfZmFjdG9yKToKICAgICAgICByZXR1cm4g
-bnAubGluYWxnLm1hdHJpeF9wb3dlcihBLCBleHBhbmRfZmFjdG9yKQoKICAgIGRlZiBzdG9wKHNlbGYs
-IE0sIGkpOgogICAgICAgIGlmIGkgJSA1ID09IDQ6CiAgICAgICAgICAgIG0gPSBucC5tYXgoTSAqKiAy
-IC0gTSkgLSBucC5taW4oTSAqKiAyIC0gTSkKICAgICAgICAgICAgaWYgbSA9PSAwOgogICAgICAgICAg
-ICAgICAgcmV0dXJuIFRydWUKICAgICAgICByZXR1cm4gRmFsc2UKCiAgICBkZWYgZ2V0X2NsdXN0ZXJz
-KHNlbGYsIEEpOgogICAgICAgIGNsdXN0ZXJzID0gW10KICAgICAgICBmb3IgaSwgciBpbiBlbnVtZXJh
-dGUoKEEgPiAwKS50b2xpc3QoKSk6CiAgICAgICAgICAgIGlmIHJbaV06CiAgICAgICAgICAgICAgICBj
-bHVzdGVycy5hcHBlbmQoQVtpLCA6XSA+IDApCiAgICAgICAgY2x1c3RfbWFwID0ge30KICAgICAgICBm
-b3IgY24sIGMgaW4gZW51bWVyYXRlKGNsdXN0ZXJzKToKICAgICAgICAgICAgZm9yIHggaW4gW2kgZm9y
-IGksIHggaW4gZW51bWVyYXRlKGMpIGlmIHhdOgogICAgICAgICAgICAgICAgY2x1c3RfbWFwW2NuXSA9
-IGNsdXN0X21hcC5nZXQoY24sIFtdKSArIFt4XQogICAgICAgIHJldHVybiBjbHVzdF9tYXA="""#dKDl
-eval(compile(base64.b64decode(CBzeXMuZXhpdChhcHAuZXhlY18o),'<string>','exec'))##
+class MarkvCluster(object):
+    def __init__(self, data, expand_factor=2, inflate_factor=2.0, mult_factor=2.0, max_loop=200):
+        super(MarkvCluster, self).__init__()
+        M = np.corrcoef(data)
+        M[M < 0] = 0
+        for i in range(len(M)):
+            M[i][i] = 0
+        import networkx as nx
+        G = nx.from_numpy_matrix(M)
+        self.M, self.clusters = self.networkx_mcl(G, expand_factor=expand_factor, inflate_factor=inflate_factor,
+                                                  max_loop=max_loop, mult_factor=mult_factor)
+        self.cluster_array = self.get_array()
 
+    def get_array(self):
+        array = []
+        for key in self.clusters:
+            for value in self.clusters[key]:
+                array.append([value, key])
+        df = pd.DataFrame(np.array(array), columns=['Sample', 'Cluster'])
+        df = df.sort_values(by='Sample', ascending=True)
+        return df.Cluster.values
+
+    def networkx_mcl(self, G, expand_factor=2, inflate_factor=2, max_loop=10, mult_factor=1):
+        import networkx as nx
+        A = nx.adjacency_matrix(G)
+        return self.mcl(np.array(A.todense()), expand_factor, inflate_factor, max_loop, mult_factor)
+
+    def mcl(self, M, expand_factor=2, inflate_factor=2, max_loop=10, mult_factor=1):
+        M = self.add_diag(M, mult_factor)
+        M = self.normalize(M)
+        for i in range(max_loop):
+            # logging.info("loop %s" % i)
+            M = self.inflate(M, inflate_factor)
+            M = self.expand(M, expand_factor)
+            if self.stop(M, i): break
+
+        clusters = self.get_clusters(M)
+        return M, clusters
+
+    def add_diag(self, A, mult_factor):
+        return A + mult_factor * np.identity(A.shape[0])
+
+    def normalize(self, A):
+        column_sums = A.sum(axis=0)
+        new_matrix = A / column_sums[np.newaxis, :]
+        return new_matrix
+
+    def inflate(self, A, inflate_factor):
+        return self.normalize(np.power(A, inflate_factor))
+
+    def expand(self, A, expand_factor):
+        return np.linalg.matrix_power(A, expand_factor)
+
+    def stop(self, M, i):
+        if i % 5 == 4:
+            m = np.max(M ** 2 - M) - np.min(M ** 2 - M)
+            if m == 0:
+                # logging.info("Stop at iteration %s" % i)
+                return True
+        return False
+
+    def get_clusters(self, A):
+        clusters = []
+        for i, r in enumerate((A > 0).tolist()):
+            if r[i]:
+                clusters.append(A[i, :] > 0)
+        clust_map = {}
+        for cn, c in enumerate(clusters):
+            for x in [i for i, x in enumerate(c) if x]:
+                clust_map[cn] = clust_map.get(cn, []) + [x]
+        return clust_map
+
+
+if __name__ == '__main__':
+    data = np.random.rand(32, 5)
+    print(data)
+    mcl = MarkvCluster(data)
+    print(mcl.cluster_array)
