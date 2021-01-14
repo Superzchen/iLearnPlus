@@ -248,7 +248,7 @@ class MainWindow(QMainWindow):
             QMessageBox.critical(self, 'Error', str(e), QMessageBox.Ok | QMessageBox.No, QMessageBox.Ok)
 
     def openDocumentUrl(self):
-        QDesktopServices.openUrl(QUrl('https://ilearnplus.erc.monash.edu/'))
+        QDesktopServices.openUrl(QUrl('https://ilearnplus.erc.monash.edu/docs/iLearnPlus_manual.pdf'))
 
     def openAbout(self):
         QMessageBox.information(self, 'iLearnPlus', 'Version: 1.0\nAuthor: Zhen Chen\nE-mail: chenzhen-win2009@163.com', QMessageBox.Ok | QMessageBox.No, QMessageBox.Ok)
