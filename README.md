@@ -100,4 +100,4 @@ The lysine crotonylation datasets can be downloaded [here](https://github.com/Su
 ## Citation
 If you find *iLearnPlus* useful, please kindly cite the following paper:
   
-Zhen Chen, Pei Zhao, Chen Li, Fuyi Li, Dongxu Xiang, Yong-Zi Chen, Tatsuya Akutsu, Roger J Daly, Geoffrey I Webb, Quanzhi Zhao, Lukasz Kurgan, Jiangning Song, iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization, Nucleic Acids Research, 2021;, gkab122, https://doi.org/10.1093/nar/gkab122
+Zhen Chen, Pei Zhao, Chen Li, Fuyi Li, Dongxu Xiang, Yong-Zi Chen, Tatsuya Akutsu, Roger J Daly, Geoffrey I Webb, Quanzhi Zhao, Lukasz Kurgan, Jiangning Song, iLearnPlus: a comprehensive and automated machine-learning platform for nucleic acid and protein sequence analysis, prediction and visualization,  *Nucleic Acids Research* , 2021;, gkab122, https://doi.org/10.1093/nar/gkab122
