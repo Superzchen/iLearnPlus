@@ -22,7 +22,7 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   Please refer to https://pytorch.org/get-started/locally/ for PyTorch installation.
   ```
   
-  - Step 3. Install PyTorch:
+  - Step 3. Install iLearnPlus through pip3:
   ```sh  
   pip3 install ilearnplus
   ```
