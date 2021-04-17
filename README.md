@@ -29,7 +29,7 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   
   - Step 4. run iLearnPlus:
   ```sh
-  >>> python
+  $ python
   >>> from ilearnplus import runiLearnPlus
   >>> runiLearnPlus()
   ```
@@ -58,15 +58,14 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   pip3 install xgboost
   pip3 install qdarkstyle  
   ```
-
-
-
-## Guidance to use :
-cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearnPlus.py’ script as follows:
-```sh
-python iLearnPlus.py
-```
   
+  - Step 4. run iLearnPlus:
+  cd to the *iLearnPlus* folder which contains iLearnPlus.py and run the ‘iLearnPlus.py’ script as follows:
+  ```sh
+  python iLearnPlus.py
+  ```
+
+## Guidance to use :  
 Please refer to [*iLearnPlus* manual](https://github.com/Superzchen/iLearnPlus/blob/main/docs/iLearnPlus_manual.pdf ) for detailed usage.
   
 ## *iLearnPlus* interfaces:
