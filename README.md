@@ -10,7 +10,32 @@ Four major modules, including *iLearnPlus-Basic*, *iLearnPlus-Estimator*, *iLear
   *iLearnPlus* is an open-source Python-based toolkit, which operates in the Python environment (Python version 3.6 or above) and can run on multiple operating systems (such as Windows, Mac and Linux). Prior to installing and running *iLearnPlus*, all the dependencies should be installed in the Python environment, including sys, os, re, PyQt5, qdarkstyle, numpy (1.18.5), pandas (1.0.5), threading, sip, datetime, platform, pickle, copy, scikit-learn (0.23.1), math, scipy (1.5.0), collections, itertools, torch (≥1.3.1), lightgbm (2.3.1), xgboost (1.0.2), matplotlib (3.1.1), seaborn,  joblib, warnings, random, multiprocessing and time. **For convenience, we strongly recommended users to install the Anaconda Python environment in your local computer. The software can be freely downloaded from https://www.anaconda.com/.**
   
 ## Installation
+
+### Method 1
+  - Step 1. Download and install the anaconda platform.
+  ```sh  
+  Download from: https://www.anaconda.com/products/individual
+  ```
   
+  - Step 2. Install PyTorch:
+  ```sh  
+  Please refer to https://pytorch.org/get-started/locally/ for PyTorch installation.
+  ```
+  
+  - Step 3. Install PyTorch:
+  ```sh  
+  pip3 install ilearnplus
+  ```
+  
+  - Step 4. run iLearnPlus:
+  ```sh
+  >>> python
+  >>> from ilearnplus import runiLearnPlus
+  >>> runiLearnPlus()
+  ```
+  
+
+### Method 2
   - Download *iLearnPlus* by 
   ```sh
   git clone https://github.com/Superzchen/iLearnPlus
