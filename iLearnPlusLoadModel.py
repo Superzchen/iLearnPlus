@@ -2,6 +2,8 @@
 # _*_ coding: utf-8 _*_
 
 import sys, os, re
+pPath = os.path.split(os.path.realpath(__file__))[0]
+sys.path.append(pPath)
 from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QFileDialog, QLabel, QHBoxLayout, QGroupBox, QTextEdit,
                              QVBoxLayout, QSplitter, QTableWidget, QTabWidget,
                              QTableWidgetItem, QMessageBox, QFormLayout, QRadioButton,
@@ -54,7 +56,7 @@ class iLearnPlusLoadModel(QWidget):
         self.setWindowTitle('iLearnPlus LoadModel')
         self.resize(800, 600)
         self.setWindowState(Qt.WindowMaximized)
-        self.setWindowIcon(QIcon('images/logo.ico'))
+        self.setWindowIcon(QIcon(os.path.join(pPath, 'images', 'logo.ico')))
 
         # file
         topGroupBox = QGroupBox('Load data', self)
@@ -182,27 +184,45 @@ class iLearnPlusLoadModel(QWidget):
         self.setLayout(vLayout)
 
     def loadModel(self):
-        model_files, ok = QFileDialog.getOpenFileNames(self, 'Open', './data', 'PKL Files (*.pkl)')
+        model_files, ok = QFileDialog.getOpenFileNames(self, 'Open', os.path.join(pPath, 'data'), 'PKL Files (*.pkl)')
         if len(model_files) > 0:
             self.model_list = []
             for file in model_files:
+                error_tag_ml = False
+                error_tag_dl = False
+                model = None
                 try:
                     model = joblib.load(file)
-                    if 'predict_proba' not in dir(model):
-                        model = torch.load(file)
-                    self.model_list.append(model)
                 except Exception as e:
-                    QMessageBox.critical(self, 'Error', 'Load model failed.', QMessageBox.Ok | QMessageBox.No, QMessageBox.Ok)
-                    self.model_list = []
-                    return False
-            self.logTextEdit.append('Load model successfully.')
-            self.logTextEdit.append('Model number: %s' %len(model_files))
-            return True
+                    error_tag_ml = True
+                
+                if error_tag_ml:
+                    try:
+                        model = torch.load(file)
+                    except Exception as e:
+                        error_tag_dl = True
+                else:
+                    if 'predict_proba' not in dir(model):
+                        try:
+                            model = torch.load(file)
+                        except Exception as e:
+                            error_tag_dl = True
+
+                if not error_tag_dl or not error_tag_ml:
+                    self.model_list.append(model)
+            if len(self.model_list) > 0:                
+                self.logTextEdit.append('Load model successfully.')
+                self.logTextEdit.append('Model number: %s' %len(model_files))
+                return True
+            else:
+                QMessageBox.critical(self, 'Error', 'Load model failed.', QMessageBox.Ok | QMessageBox.No, QMessageBox.Ok)
+                self.model_list = []
+                return False
         else:
             return False
 
     def loadDataFile(self):
-        file, ok = QFileDialog.getOpenFileName(self, 'Open', './data', 'CSV Files (*.csv);;TSV Files (*.tsv);;SVM Files(*.svm);;Weka Files (*.arff)')
+        file, ok = QFileDialog.getOpenFileName(self, 'Open', os.path.join(pPath, 'data'), 'CSV Files (*.csv);;TSV Files (*.tsv);;SVM Files(*.svm);;Weka Files (*.arff)')
         if ok:
             if not os.path.exists(file):
                 QMessageBox.critical(self, 'Error', 'Data file does not exist.', QMessageBox.Ok | QMessageBox.No, QMessageBox.Ok)
