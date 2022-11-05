@@ -6904,7 +6904,7 @@ class Descriptor(Sequence):
                 
                 if file_name.endswith(".tsv1"):
                     np.savetxt(file_name, self.encoding_array, fmt='%s', delimiter='\t')
-                    return Ture
+                    return True
 
                 if file_name.endswith(".svm"):
                     with open(file_name, 'w') as f:
