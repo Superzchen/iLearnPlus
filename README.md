@@ -98,7 +98,7 @@ The *iLearnPlus-LoadModel* module allows users to upload, deploy and test their 
   
 ![LoadModel module](https://github.com/Superzchen/iLearnPlus/blob/main/images/LoadModel.png )
 
-### *iLearnPlus* Data visulaization:
+### *iLearnPlus* Data visualization:
   
 ![Data visualizaiton](https://github.com/Superzchen/iLearnPlus/blob/main/images/DataVisualization.png)
 
