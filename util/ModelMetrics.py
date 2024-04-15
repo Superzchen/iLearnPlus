@@ -17,7 +17,11 @@ class ModelMetrics(object):
 
     def insert_data(self, metric_ndarray, id, auc_df, prc_df, prediction_score, model=None):
         df = pd.DataFrame(data=metric_ndarray)
-        self.metrics = self.metrics.append(df, ignore_index=True)
+        # self.metrics = self.metrics.append(df, ignore_index=True)
+        if len(self.metrics) == 0:
+            self.metrics = df
+        else:
+            self.metrics = pd.concat([self.metrics, df], axis=0)
         self.aucData[id] = auc_df
         self.prcData[id] = prc_df
         self.prediction_scores[id] = prediction_score
